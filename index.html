@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BOUNCE | Hair Care</title>
+
+    <meta name="description"
+        content="Discover BOUNCE hair care collections. Find the right routine to nourish, strengthen and care for your hair.">
+
+    <meta name="theme-color" content="#E83E91">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="main-header" id="home">
+
+        <a href="#home" class="logo" aria-label="BOUNCE Home">
+            <img src="images/bounce-logo.jpeg" alt="BOUNCE Logo">
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="#offers">Offers</a>
+            <a href="about.html">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="cart.html" class="cart" aria-label="Open shopping cart">
+            <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+            <span id="cart-count">0</span>
+        </a>
+
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    YOUR HAIR. YOUR BOUNCE.
+                </span>
+
+                <h1>
+                    Give Your Hair
+                    <span>A Reason to Bounce</span>
+                </h1>
+
+                <p>
+                    Discover your perfect hair care routine with
+                    products designed to nourish, strengthen
+                    and bring out the best in your hair.
+                </p>
+
+                <a href="shop.html" class="shop-btn">
+                    SHOP NOW
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+        <section class="home-products" id="shop">
+
+            <div class="section-title">
+
+                <span>EXPLORE BOUNCE</span>
+
+                <h2>Discover Our Products</h2>
+
+                <p>
+                    Find the perfect care for your hair.
+                </p>
+
+            </div>
+
+            <div class="products-grid" id="home-products"></div>
+
+        </section>
+
+        <section class="new-arrivals">
+
+            <div class="section-title">
+
+                <span>JUST LANDED</span>
+
+                <h2>New Arrivals</h2>
+
+                <p>
+                    Meet the latest additions to the BOUNCE family.
+                </p>
+
+            </div>
+
+            <div class="products-grid" id="new-arrivals"></div>
+
+        </section>
+
+        <section class="home-categories" id="offers">
+
+            <div class="section-title">
+
+                <span>DON'T MISS OUT</span>
+
+                <h2>Special Offers</h2>
+
+                <p>
+                    Your favorite hair care essentials at special prices.
+                </p>
+
+            </div>
+
+            <div class="products-grid" id="offer-products"></div>
+
+        </section>
+
+        <section class="about-section" id="about">
+
+            <span>OUR STORY</span>
+
+            <h2>About BOUNCE</h2>
+
+            <p>
+                At BOUNCE, we believe that great hair starts
+                with the right care.
+
+                We bring you thoughtfully selected hair care
+                products designed for different hair types
+                and needs.
+
+                From cleansing and conditioning to deep
+                nourishment and daily care, we're here to help
+                you build a routine your hair will love.
+            </p>
+
+            <h3>
+                Love Your Hair. Feel The Bounce.
+            </h3>
+
+        </section>
+
+        <section class="contact-section" id="contact">
+
+            <span>GET IN TOUCH</span>
+
+            <h2>Connect With BOUNCE</h2>
+
+            <p>
+                Follow us for hair care tips, new arrivals,
+                exclusive offers and more!
+            </p>
+
+            <div class="social-links" aria-label="BOUNCE social media">
+
+                <a href="https://www.facebook.com/share/1FqrhXMJZA/?mibextid=wwXIfr"
+                    target="_blank" rel="noopener noreferrer"
+                    aria-label="Facebook" class="facebook-link">
+                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                </a>
+
+                <a href="https://www.instagram.com/bounce__cosmetics?dlrf=ZWZyZGV1YXAzbXo3"
+                    target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram" class="instagram-link">
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+
+                <a href="https://www.tiktok.com/@bounce.cosmetics?_r=1&_t=ZS-9BC6NCQnCtw"
+                    target="_blank" rel="noopener noreferrer"
+                    aria-label="TikTok" class="tiktok-link">
+                    <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="cart-box" id="cart-box">
+
+        <div class="cart-header">
+
+            <h2>My Shopping Cart</h2>
+
+            <button type="button" onclick="toggleCart()"
+                aria-label="Close cart">
+                &times;
+            </button>
+
+        </div>
+
+        <div id="cart-items">
+            <p>Your cart is empty.</p>
+        </div>
+
+        <div class="cart-total">
+
+            <h3>
+                Total:
+                <span id="cart-total">0</span> EGP
+            </h3>
+
+        </div>
+
+    </div>
+
+    <footer class="main-footer">
+
+        <a href="#home" class="logo" aria-label="BOUNCE Home">
+            <img src="images/bounce-logo.jpeg" alt="BOUNCE Logo">
+        </a>
+
+        <p>
+            Love Your Hair. Feel The Bounce.
+        </p>
+
+        <div class="footer-socials" aria-label="BOUNCE social media">
+
+            <a href="https://www.facebook.com/share/1FqrhXMJZA/?mibextid=wwXIfr"
+                target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </a>
+
+            <a href="https://www.instagram.com/bounce__cosmetics?dlrf=ZWZyZGV1YXAzbXo3"
+                target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@bounce.cosmetics?_r=1&_t=ZS-9BC6NCQnCtw"
+                target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+            </a>
+
+        </div>
+
+        <span>
+            © 2026 BOUNCE. All Rights Reserved.
+        </span>
+
+    </footer>
+
+    <!-- Supabase Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- BOUNCE Main Script -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop | BOUNCE Hair Care</title>
+
+    <meta name="description"
+        content="Explore BOUNCE hair care collections. Find the perfect routine for your hair.">
+
+    <meta name="theme-color" content="#E83E91">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./shop.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .shop-products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .shop-product-image {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 360px;
+            overflow: hidden;
+            background: #FFF9FC;
+        }
+
+        .shop-product-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 15px;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .shop-product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 2;
+        }
+
+        .shop-product-image .shop-image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #C51F70;
+            background: linear-gradient(
+                135deg,
+                #FFF0F7,
+                #FFF4E9,
+                #F2F9E9
+            );
+        }
+
+        @media (max-width: 768px) {
+            .shop-products-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 15px;
+            }
+
+            .shop-product-image {
+                height: 280px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .shop-products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .shop-product-image {
+                height: 340px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="main-header">
+
+        <a href="index.html#home" class="logo" aria-label="BOUNCE Home">
+            <img src="./images/bounce-logo.jpeg" alt="BOUNCE Logo">
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html#home">Home</a>
+            <a href="shop.html" class="active" aria-current="page">Shop</a>
+            <a href="index.html#offers">Offers</a>
+            <a href="about.html">About Us</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <a href="cart.html" class="cart" aria-label="Open shopping cart">
+            <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+            <span id="cart-count">0</span>
+        </a>
+
+    </header>
+
+    <main>
+
+        <section class="shop-hero">
+
+            <div class="shop-hero-content">
+
+                <span class="shop-eyebrow">
+                    THE BOUNCE COLLECTION
+                </span>
+
+                <h1>
+                    Find Your Perfect
+                    <span>Hair Care Routine</span>
+                </h1>
+
+                <p>
+                    Because every hair type deserves the right kind of care.
+                    Discover your perfect match with BOUNCE.
+                </p>
+
+                <a href="#collections" class="shop-hero-btn">
+                    EXPLORE COLLECTIONS
+                    <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                </a>
+
+            </div>
+
+            <div class="shop-hero-decoration" aria-hidden="true">
+                <span>LOVE</span>
+                <span>YOUR</span>
+                <span>HAIR</span>
+            </div>
+
+        </section>
+
+        <div class="shop-breadcrumb">
+
+            <a href="index.html">Home</a>
+
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+
+            <span>Shop</span>
+
+        </div>
+
+        <section class="shop-collections" id="collections">
+
+            <div class="shop-section-heading">
+
+                <span>DISCOVER YOUR MATCH</span>
+
+                <h2>Our Hair Care Collections</h2>
+
+                <p>
+                    Three collections. Different hair needs.
+                    One goal: healthier-looking, more beautiful hair.
+                </p>
+
+            </div>
+
+            <div class="shop-products-grid" id="shop-products-grid">
+                <p class="shop-loading">Loading collections...</p>
+            </div>
+
+        </section>
+
+        <section class="shop-bottom-banner">
+
+            <span>YOUR HAIR DESERVES THE BEST</span>
+
+            <h2>
+                Make Every Hair Day
+                <strong>A BOUNCE Day.</strong>
+            </h2>
+
+            <a href="index.html#contact">
+                GET IN TOUCH
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+
+        </section>
+
+    </main>
+
+    <div class="cart-box" id="cart-box">
+
+        <div class="cart-header">
+
+            <h2>My Shopping Cart</h2>
+
+            <button
+                type="button"
+                onclick="toggleCart()"
+                aria-label="Close cart">
+                &times;
+            </button>
+
+        </div>
+
+        <div id="cart-items">
+            <p>Your cart is empty.</p>
+        </div>
+
+        <div class="cart-total">
+
+            <h3>
+                Total:
+                <span id="cart-total">0</span> EGP
+            </h3>
+
+        </div>
+
+    </div>
+
+    <footer class="main-footer">
+
+        <a href="index.html#home" class="logo" aria-label="BOUNCE Home">
+            <img src="./images/bounce-logo.jpeg" alt="BOUNCE Logo">
+        </a>
+
+        <p>Love Your Hair. Feel The Bounce.</p>
+
+        <div class="footer-socials" aria-label="BOUNCE social media">
+
+            <a href="https://www.facebook.com/share/1FqrhXMJZA/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </a>
+
+            <a href="https://www.instagram.com/bounce__cosmetics?dlrf=ZWZyZGV1YXAzbXo3"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@bounce.cosmetics?_r=1&_t=ZS-9BC6NCQnCtw"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok">
+                <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+            </a>
+
+        </div>
+
+        <span>© 2026 BOUNCE. All Rights Reserved.</span>
+
+    </footer>
+
+    <!-- Supabase Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- BOUNCE Main Script -->
+    <script src="./script.js?v=4" defer></script>
+
+    <!-- SHOP PRODUCTS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", async function () {
+
+            const container = document.getElementById("shop-products-grid");
+
+            if (!container) return;
+
+            // Reuse the shared Supabase connection from script.js.
+            const client = window.bounceSupabase;
+
+            if (!client) {
+                container.innerHTML =
+                    "<p class='shop-loading'>Unable to connect to the store right now.</p>";
+                console.error("BOUNCE: Shared Supabase client is unavailable.");
+                return;
+            }
+
+            const productDetails = {
+                "1": {
+                    tagline: "STRENGTH & SOFTNESS",
+                    description: "Designed to support softer-feeling hair and improve the appearance of weak and fragile strands."
+                },
+                "2": {
+                    tagline: "NOURISHMENT & CARE",
+                    description: "A nourishing hair care collection created for dry and damaged hair that needs extra care."
+                },
+                "3": {
+                    tagline: "MOISTURE & SHINE",
+                    description: "For hair that needs moisture, nourishment, softness and a beautiful shine."
+                }
+            };
+
+            function safeText(value) {
+                return String(value ?? "").replace(/[&<>"']/g, char => ({
+                    "&": "&amp;",
+                    "<": "&lt;",
+                    ">": "&gt;",
+                    '"': "&quot;",
+                    "'": "&#39;"
+                })[char]);
+            }
+
+            function money(value) {
+                return Number(value || 0).toLocaleString("en-US") + " EGP";
+            }
+
+            function imageMarkup(product) {
+                if (!product.image) {
+                    return `
+                        <div class="shop-image-placeholder">
+                            <strong style="font-size:30px;">BOUNCE</strong>
+                            <span>${safeText(product.line || "HAIR CARE COLLECTION")}</span>
+                        </div>
+                    `;
+                }
+
+                return `
+                    <img
+                        src="${safeText(product.image)}"
+                        alt="${safeText(product.name)}"
+                        loading="lazy"
+                        onerror="
+                            this.style.display='none';
+                            this.nextElementSibling.style.display='flex';
+                        "
+                    >
+
+                    <div class="shop-image-placeholder" style="display:none;">
+                        <strong style="font-size:30px;">BOUNCE</strong>
+                        <span>${safeText(product.line || "HAIR CARE COLLECTION")}</span>
+                    </div>
+                `;
+            }
+
+            try {
+                const { data, error } = await client
+                    .from("products")
+                    .select("*")
+                    .eq("is_active", true)
+                    .order("id", { ascending: true });
+
+                if (error) throw error;
+
+                if (!data || data.length === 0) {
+                    container.innerHTML =
+                        "<p class='shop-loading'>No products are available right now.</p>";
+                    return;
+                }
+
+                container.innerHTML = data.map(product => {
+
+                    const id = String(product.id);
+
+                    const details = productDetails[id] || {
+                        tagline: product.line || "BOUNCE COLLECTION",
+                        description: product.description ||
+                            "Discover your perfect hair care routine with BOUNCE."
+                    };
+
+                    const price = Number(product.price) || 0;
+                    const oldPrice = Number(product.old_price) || 0;
+
+                    const discount = oldPrice > price && oldPrice > 0
+                        ? Math.round((1 - price / oldPrice) * 100)
+                        : 0;
+
+                    return `
+                        <article class="shop-product-card">
+
+                            <a
+                                href="product.html?id=${encodeURIComponent(id)}"
+                                class="shop-product-image"
+                                aria-label="View ${safeText(product.name)}">
+
+                                ${product.is_new
+                                    ? '<span class="shop-product-badge">NEW</span>'
+                                    : ''}
+
+                                ${imageMarkup(product)}
+
+                            </a>
+
+                            <div class="shop-product-info">
+
+                                <span class="shop-product-line">
+                                    ${safeText(details.tagline)}
+                                </span>
+
+                                <h3>
+                                    <a href="product.html?id=${encodeURIComponent(id)}">
+                                        ${safeText(product.name)}
+                                    </a>
+                                </h3>
+
+                                <p>${safeText(details.description)}</p>
+
+                                <div class="shop-product-price">
+
+                                    <span>${money(price)}</span>
+
+                                    ${discount > 0
+                                        ? `<del>${money(oldPrice)}</del>`
+                                        : ''}
+
+                                </div>
+
+                                <button
+                                    type="button"
+                                    class="shop-add-btn"
+                                    data-add-to-cart="${safeText(id)}">
+
+                                    <i class="fa-solid fa-bag-shopping"
+                                       aria-hidden="true"></i>
+
+                                    ADD TO CART
+
+                                </button>
+
+                            </div>
+
+                        </article>
+                    `;
+
+                }).join("");
+
+            } catch (error) {
+                console.error("BOUNCE shop loading error:", error);
+
+                container.innerHTML =
+                    "<p class='shop-loading'>Unable to load collections right now. Please try again later.</p>";
+            }
+
+        });
+    </script>
+
+</body>
+</html>

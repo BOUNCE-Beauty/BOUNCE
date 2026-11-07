@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review your BOUNCE hair care products and complete your order.">
+    <title>Your Cart | BOUNCE</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./cart.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                <img src="images/bounce-logo.jpeg" alt="BOUNCE">
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html">HOME</a>
+                <a href="shop.html">SHOP</a>
+                <a href="index.html#about">ABOUT</a>
+                <a href="index.html#contact">CONTACT</a>
+            </nav>
+
+            <a href="cart.html" class="header-cart" aria-label="Shopping cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cart-count">0</span>
+            </a>
+
+        </div>
+    </header>
+
+    <main class="cart-page">
+
+        <section class="cart-heading">
+            <span class="cart-eyebrow">YOUR BOUNCE ROUTINE</span>
+            <h1>Your Shopping Cart</h1>
+            <p>Review your selected products before continuing.</p>
+        </section>
+
+        <section class="cart-layout">
+
+            <div class="cart-main">
+
+                <div class="cart-section-heading">
+                    <h2>Shopping Bag</h2>
+                    <span id="cart-items-count">0 ITEMS</span>
+                </div>
+
+                <div id="cart-page-items"></div>
+
+                <div id="empty-cart" class="empty-cart" hidden>
+                    <div class="empty-cart-icon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+
+                    <h2>Your cart is waiting for you</h2>
+                    <p>You haven't added any products yet.</p>
+
+                    <a href="shop.html" class="cart-primary-button">
+                        EXPLORE PRODUCTS
+                    </a>
+                </div>
+
+                <a href="shop.html" class="continue-shopping">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Continue Shopping
+                </a>
+
+            </div>
+
+            <aside class="cart-summary" id="cart-summary">
+
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong id="cart-subtotal">0 EGP</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <strong id="cart-shipping">Select governorate</strong>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-total">
+                    <span>Estimated Total</span>
+                    <strong id="cart-grand-total">0 EGP</strong>
+                </div>
+
+                <p class="summary-note">
+                    Shipping is 50 EGP for selected governorates and 100 EGP for other governorates.
+                </p>
+
+                <a href="#checkout" class="cart-checkout-button" id="checkout-link">
+                    CONTINUE TO CHECKOUT
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <div class="cart-trust-note">
+                    <i class="fa-solid fa-lock"></i>
+                    Secure shopping experience
+                </div>
+
+            </aside>
+
+        </section>
+
+        <section class="checkout-section" id="checkout">
+
+            <div class="checkout-heading">
+                <span class="cart-eyebrow">ALMOST THERE</span>
+                <h2>Delivery Information</h2>
+                <p>Enter your details to prepare your order.</p>
+            </div>
+
+            <form id="checkout-form" class="checkout-form">
+
+                <div class="checkout-field">
+                    <label for="customer-name">Full Name</label>
+                    <input
+                        type="text"
+                        id="customer-name"
+                        name="customerName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required>
+                </div>
+
+                <div class="checkout-field">
+                    <label for="customer-phone">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="customer-phone"
+                        name="customerPhone"
+                        placeholder="01XXXXXXXXX"
+                        autocomplete="tel"
+                        inputmode="tel"
+                        required>
+                </div>
+
+                <div class="checkout-field">
+                    <label for="customer-governorate">Governorate</label>
+                    <select
+                        id="customer-governorate"
+                        name="customerGovernorate"
+                        autocomplete="address-level1"
+                        required>
+
+                        <option value="">Choose your governorate</option>
+                        <option value="القاهرة">Cairo - القاهرة</option>
+                        <option value="الجيزة">Giza - الجيزة</option>
+                        <option value="الإسكندرية">Alexandria - الإسكندرية</option>
+                        <option value="الغربية">Gharbia - الغربية</option>
+                        <option value="كفر الشيخ">Kafr El Sheikh - كفر الشيخ</option>
+                        <option value="الدقهلية">Dakahlia - الدقهلية</option>
+                        <option value="الشرقية">Sharqia - الشرقية</option>
+                        <option value="المنوفية">Monufia - المنوفية</option>
+                        <option value="القليوبية">Qalyubia - القليوبية</option>
+                        <option value="البحيرة">Beheira - البحيرة</option>
+                        <option value="دمياط">Damietta - دمياط</option>
+                        <option value="بورسعيد">Port Said - بورسعيد</option>
+                        <option value="الإسماعيلية">Ismailia - الإسماعيلية</option>
+                        <option value="السويس">Suez - السويس</option>
+                        <option value="شمال سيناء">North Sinai - شمال سيناء</option>
+                        <option value="جنوب سيناء">South Sinai - جنوب سيناء</option>
+                        <option value="الفيوم">Fayoum - الفيوم</option>
+                        <option value="بني سويف">Beni Suef - بني سويف</option>
+                        <option value="المنيا">Minya - المنيا</option>
+                        <option value="أسيوط">Assiut - أسيوط</option>
+                        <option value="سوهاج">Sohag - سوهاج</option>
+                        <option value="قنا">Qena - قنا</option>
+                        <option value="الأقصر">Luxor - الأقصر</option>
+                        <option value="أسوان">Aswan - أسوان</option>
+                        <option value="البحر الأحمر">Red Sea - البحر الأحمر</option>
+                        <option value="الوادي الجديد">New Valley - الوادي الجديد</option>
+                        <option value="مطروح">Matrouh - مطروح</option>
+
+                    </select>
+                </div>
+
+                <div class="checkout-field">
+                    <label for="customer-city">City / Area</label>
+                    <input
+                        type="text"
+                        id="customer-city"
+                        name="customerCity"
+                        placeholder="Enter your city or area (e.g. Tanta)"
+                        autocomplete="address-level2"
+                        required>
+                </div>
+
+                <div class="checkout-field">
+                    <label for="customer-address">Full Address</label>
+                    <textarea
+                        id="customer-address"
+                        name="customerAddress"
+                        rows="3"
+                        placeholder="Street, building, floor, apartment..."
+                        autocomplete="street-address"
+                        required></textarea>
+                </div>
+
+                <div class="checkout-field">
+                    <label for="customer-notes">
+                        Order Notes <span>(Optional)</span>
+                    </label>
+                    <textarea
+                        id="customer-notes"
+                        name="customerNotes"
+                        rows="2"
+                        placeholder="Anything we should know?"></textarea>
+                </div>
+
+                <button type="submit" class="place-order-button">
+                    PREPARE MY ORDER
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <p class="checkout-disclaimer">
+                    Your order details will be submitted for confirmation.
+                </p>
+
+                <div id="checkout-message" class="checkout-message" hidden></div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <img src="images/bounce-logo.jpeg" alt="BOUNCE">
+
+            <p>YOUR HAIR. YOUR BOUNCE.</p>
+
+            <div class="footer-socials">
+
+                <a href="https://www.facebook.com/share/1FqrhXMJZA/?mibextid=wwXIfr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.instagram.com/bounce__cosmetics?dlrf=ZWZyZGV1YXAzbXo3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.tiktok.com/@bounce.cosmetics?_r=1&_t=ZS-9BC6NCQnCtw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+            </div>
+
+            <span>© 2026 BOUNCE. All rights reserved.</span>
+
+        </div>
+
+    </footer>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Main cart and product logic -->
+    <script src="./script.js?v=2" defer></script>
+    <script src="./cart.js?v=2" defer></script>
+
+</body>
+</html>

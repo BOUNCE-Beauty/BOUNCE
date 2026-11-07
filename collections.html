@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Collections | BOUNCE</title>
+    <meta name="description" content="Explore BOUNCE hair care collections and find the right routine for your hair.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="collection.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                <img src="images/bounce-logo.jpeg" alt="BOUNCE">
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html">HOME</a>
+                <a href="shop.html">SHOP</a>
+                <a href="index.html#about">ABOUT</a>
+                <a href="index.html#contact">CONTACT</a>
+            </nav>
+
+            <a href="cart.html" class="header-cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cart-count">0</span>
+            </a>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="collection-hero" id="collection-hero">
+
+            <div class="collection-hero-content">
+
+                <span class="collection-eyebrow">DISCOVER YOUR ROUTINE</span>
+
+                <h1 id="collection-title">BOUNCE COLLECTIONS</h1>
+
+                <p id="collection-description">
+                    Find the hair care routine that fits your hair needs.
+                </p>
+
+                <a href="#collection-products" class="collection-hero-button">
+                    EXPLORE COLLECTION
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+        <section class="collection-switcher">
+
+            <div class="collection-switcher-heading">
+                <span>FIND YOUR MATCH</span>
+                <h2>Explore Our Collections</h2>
+            </div>
+
+            <div class="collection-switcher-grid">
+
+                <a href="collection.html?line=collagen"
+                   class="collection-switch-card collagen-card">
+
+                    <span>01</span>
+                    <h3>COLLAGEN</h3>
+                    <p>For weak and fragile-looking hair</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+                <a href="collection.html?line=caviar"
+                   class="collection-switch-card caviar-card">
+
+                    <span>02</span>
+                    <h3>CAVIAR</h3>
+                    <p>For dry and damaged-looking hair</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+                <a href="collection.html?line=argan"
+                   class="collection-switch-card argan-card">
+
+                    <span>03</span>
+                    <h3>ARGAN</h3>
+                    <p>For moisture, softness and shine</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <section class="collection-products-section" id="collection-products">
+
+            <div class="collection-products-heading">
+
+                <div>
+                    <span class="collection-eyebrow">THE BOUNCE EDIT</span>
+                    <h2 id="products-heading">Explore Products</h2>
+                    <p id="products-subheading">
+                        Discover the products in this collection.
+                    </p>
+                </div>
+
+                <a href="shop.html" class="back-to-shop">
+                    VIEW ALL PRODUCTS
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+            <div class="collection-products-grid" id="collection-products-grid">
+                <div class="collection-loading">
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+                    <p>Loading collection...</p>
+                </div>
+            </div>
+
+            <div class="collection-empty" id="collection-empty" hidden>
+                <h3>Collection Not Found</h3>
+                <p>Explore all our available hair care collections.</p>
+                <a href="shop.html">GO TO SHOP</a>
+            </div>
+
+        </section>
+
+        <section class="collection-bottom-banner">
+
+            <div>
+                <span>YOUR HAIR. YOUR BOUNCE.</span>
+                <h2>Make Every Day A Good Hair Day.</h2>
+                <p>Discover your routine and give your hair the care it deserves.</p>
+            </div>
+
+            <a href="shop.html">SHOP ALL PRODUCTS</a>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <img src="images/bounce-logo.jpeg" alt="BOUNCE">
+
+            <p>YOUR HAIR. YOUR BOUNCE.</p>
+
+            <div class="footer-socials">
+
+                <a
+                    href="https://www.facebook.com/share/1FqrhXMJZA/?mibextid=wwXIfr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a
+                    href="https://www.instagram.com/bounce__cosmetics?dlrf=ZWZyZGV1YXAzbXo3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a
+                    href="https://www.tiktok.com/@bounce.cosmetics?_r=1&_t=ZS-9BC6NCQnCtw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+            </div>
+
+            <span>© 2026 BOUNCE. All rights reserved.</span>
+
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+    <script src="collection.js"></script>
+
+</body>
+</html>

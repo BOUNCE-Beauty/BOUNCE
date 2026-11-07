@@ -1,0 +1,20 @@
+
+{
+  "id": "/",
+  "name": "BOUNCE Cosmetics",
+  "short_name": "BOUNCE",
+  "description": "Your Hair. Your Bounce.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFF8FB",
+  "theme_color": "#E83E91",
+  "icons": [
+    {
+      "src": "/images/bounce-logo.jpeg",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
